@@ -1,4 +1,4 @@
-# Sample Hardhat Project
+# Sample Staking Contract
 
 This project demonstrates a staking contract.
 
