@@ -50,7 +50,7 @@ contract StakingRewards{
             uint256 userAmount = balances[account];
             uint256 stakedBlocks = block.number - userBlock[account];
             uint256 newRewards = stakedBlocks * userAmount * rewardRate / 100;
-
+    // 
             require(totalRewardAmount >= newRewards, "Out of reward");
 
             rewards[account] += newRewards;
