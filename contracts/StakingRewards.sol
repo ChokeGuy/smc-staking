@@ -11,7 +11,6 @@ contract StakingRewards{
     
     uint256 public duration;
     uint256 public endTime;
-    uint256 public lastUpdatedTime;
     uint256 public rewardRate;
     uint256 public totalRewardAmount;
 
