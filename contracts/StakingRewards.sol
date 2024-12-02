@@ -23,7 +23,6 @@ contract StakingRewards{
         _;
     }
 
-
     constructor(address _stakeToken, address _rewardToken,uint256 _amount,uint256 _duration){
         owner = msg.sender;
         rewardRate = 1;
@@ -78,10 +77,10 @@ contract StakingRewards{
         stakeToken.transfer(staker, _amount);
         balances[staker] -= _amount;
 
-        _updateReward(staker);
+        claimReward();
     }
 
-    function claimReward() external {
+    function claimReward() public {
         _updateReward(msg.sender);
 
         address staker = msg.sender;
